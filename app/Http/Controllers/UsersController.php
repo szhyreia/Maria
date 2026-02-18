@@ -1,42 +1,37 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
     public function index()
     {
-        return Users::all();
+        return User::all();
     }
 
-    //for storing data
     public function store(Request $request)
     {
-        return Users::create($request->all());
+        return User::create($request->all());
     }
 
-    //for showing data
     public function show(string $id)
     {
-        return Users::findOrFail($id);
+        return User::findOrFail($id);
     }
 
-    //for deleting data
     public function destroy(string $id)
     {
-        Users::destroy($id);
+        User::destroy($id);
         return response()->noContent();
     }
 
-    //for updating data
     public function update(Request $request, string $id)
     {
-        $student = Users::findOrFail($id);
-        $student->update($request->all());
-        return $student;
+        $user = User::findOrFail($id);
+        $user->update($request->all());
+        return $user;
     }
 }
