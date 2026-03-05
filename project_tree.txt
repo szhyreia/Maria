@@ -1,5 +1,5 @@
-PROJECT STRUCTURE
-=================
+PROJECT STRUCTURE - Maria (Laravel Application)
+================================================
 
 maria/
 ├── artisan
@@ -20,13 +20,7 @@ maria/
 │
 ├── bootstrap/
 │   ├── app.php
-│   ├── providers.php
-│   └── cache/
-│       ├── config.php
-│       ├── events.php
-│       ├── packages.php
-│       ├── routes-v7.php
-│       └── services.php
+│   └── providers.php
 │
 ├── config/
 │   ├── app.php
@@ -83,11 +77,9 @@ maria/
     └── Unit/
         └── ExampleTest.php
 
-═══════════════════════════════
-EXCLUDED FOLDERS (Large/Generated):
-- node_modules
-- vendor
-- storage/logs
-- storage/framework/cache/
-- storage/framework/sessions/
-═══════════════════════════════
+NOTE: Large folders excluded from this tree:
+- vendor/ (Composer dependencies)
+- node_modules/ (NPM dependencies)
+- bootstrap/cache/ (Cache files)
+- storage/framework/ (Framework storage)
+- storage/logs/ (Log files)
